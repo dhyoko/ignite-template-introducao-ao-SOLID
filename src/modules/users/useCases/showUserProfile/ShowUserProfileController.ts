@@ -8,9 +8,9 @@ class ShowUserProfileController {
   handle(request: Request, response: Response): Response {
     const { user_id } = request.params;
 
-    const users = this.showUserProfileUseCase.execute({ user_id });
+    const user = this.showUserProfileUseCase.execute({ user_id });
 
-    return response.json(users);
+    return response.json(user);
   }
 }
 
